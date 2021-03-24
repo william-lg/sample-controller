@@ -77,6 +77,22 @@ then you already have a copy of this demo in
 
 This is an example of how to build a kube-like controller with a single type.
 
+## Auto-Generating
+
+**Optional**: In order to help you understand how to generate code, try to do the following:
+```sh
+# check the module name of go.mod, eg. william.com/sample-controller
+# check the project local path, the sample-controller should under william.com directory
+# check the hack/update-codegen.sh, the pkg/generated or the pkg/apis should be the same as your project local path, eg. $HOME/william.com/sample-controller/pkg/generated
+# make sure your local project relative path is the same as your go module name
+go mod vendor
+rm -rf pkg/generated
+rm pkg/samplecontroller/v1alpha1/zz_generated.deepcopy.go
+
+./hack/update-codegen.sh
+rm -rf vendor
+```
+
 ## Running
 
 **Prerequisite**: Since the sample-controller uses `apps/v1` deployments, the Kubernetes cluster version should be greater than 1.9.

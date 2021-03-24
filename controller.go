@@ -37,11 +37,11 @@ import (
 	"k8s.io/client-go/util/workqueue"
 	"k8s.io/klog/v2"
 
-	samplev1alpha1 "k8s.io/sample-controller/pkg/apis/samplecontroller/v1alpha1"
-	clientset "k8s.io/sample-controller/pkg/generated/clientset/versioned"
-	samplescheme "k8s.io/sample-controller/pkg/generated/clientset/versioned/scheme"
-	informers "k8s.io/sample-controller/pkg/generated/informers/externalversions/samplecontroller/v1alpha1"
-	listers "k8s.io/sample-controller/pkg/generated/listers/samplecontroller/v1alpha1"
+	samplev1alpha1 "william.com/sample-controller/pkg/apis/samplecontroller/v1alpha1"
+	clientset "william.com/sample-controller/pkg/generated/clientset/versioned"
+	samplescheme "william.com/sample-controller/pkg/generated/clientset/versioned/scheme"
+	informers "william.com/sample-controller/pkg/generated/informers/externalversions/samplecontroller/v1alpha1"
+	listers "william.com/sample-controller/pkg/generated/listers/samplecontroller/v1alpha1"
 )
 
 const controllerAgentName = "sample-controller"
